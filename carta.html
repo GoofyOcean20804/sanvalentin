@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FotitOs</title>
+
+<style>
+	*{
+    	box-sizing: border-box;
+	}
+	@font-face {
+	    font-family: 'valentin';
+	    src: url('fonts/ValentineCupcake.ttf') format('woff2');
+	}
+	html, body{
+		margin:0;
+		height:100%;
+		background-color:#ffd187;
+		text-align:center;
+		font-family: 'valentin', sans-serif;
+	}
+	h1, h3{
+		color:white;
+		text-shadow:3px 3px 0 black;
+	}
+	.main{
+		margin-top:50px;
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		padding:0;
+		height:100%;
+		width:100%;
+		justify-content:start;
+		align-items:center;
+	}
+	.main::before {
+        content: "";
+        position: fixed;
+        inset: 0; /* top:0 right:0 bottom:0 left:0 */
+
+        background-image: url("fondo.png");
+        background-repeat:repeat;
+        background-size: auto 100%;
+        opacity: 0.4; /* 20% */
+        z-index: 0;
+
+        animation: moverFondo 10s linear infinite;
+    }
+
+    /* Contenido por encima */
+    .main > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Animación */
+	@keyframes moverFondo {
+	    from {
+	        background-position: 0 0;
+	    }
+	    to {
+	        background-position: -1077px 0;
+	    }
+	}
+	.img{
+		background-color: white;
+		width:50vw;
+		aspect-ratio: 1/1.3;
+
+	}
+	.img-left{		
+		transform: rotate(-10deg);
+	}
+	.img-right{		
+		transform: rotate(10deg);
+	}
+	.img-container img{
+	    width:100%;
+	    height:100%;
+	    object-fit:cover;
+	    object-position:center;
+	    display:block;
+	}
+	a {
+		font-family: 'valentin', sans-serif;
+	    background: linear-gradient(135deg, #ff4d6d, #ff8fab);
+	    color: white;
+	    border: none;
+	    padding: 12px 28px;
+	    border-radius: 30px;
+	    font-size: 1rem;
+	    font-weight: 600;
+	    cursor: pointer;
+	    transition: all 0.3s ease;
+	    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+
+	    z-index:2;
+	}
+
+	a:hover {
+	    transform: translateY(-3px);
+	    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
+	}
+
+	a:active {
+	    transform: scale(0.95);
+	}
+	#back{
+		z-index:10;
+		position: fixed;
+		left:20px;
+	}
+
+	.carta {
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+.contenido {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#p1:checked ~ .c1,
+#p2:checked ~ .c2,
+#p3:checked ~ .c3,
+#p4:checked ~ .c4,
+#p5:checked ~ .c5 {
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff4d6d;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff1f4b;
+}
+.video-container{
+    margin-top:20px;
+    position:relative;
+    width:100%;
+    max-width:500px;
+    aspect-ratio:16/9;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.video-container iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+</style>
+</head>
+<body>
+	<a href="FelizDiaDeSanValentin.html" id="back">Volver</a>
+	<div class="main">
+		<div class="carta">
+
+    <input type="radio" name="paso" id="p1" checked>
+    <input type="radio" name="paso" id="p2">
+    <input type="radio" name="paso" id="p3">
+    <input type="radio" name="paso" id="p4">
+    <input type="radio" name="paso" id="p5">
+
+    <div class="contenido c1">
+        <p>Hola mi niña, feliz san valentin <3..</p>
+        <label for="p2" class="btn">Siguiente</label>
+    </div>
+
+    <div class="contenido c2">
+        <p>adoro poder hablar contigo en estas fechas, te extrañe tanto que ni te imaginas jkaska</p>
+        <p>Me encantaria poder pasarla contigo en persona, pero aún así estoy feliz.</p>
+        <p>No voy a encontrar nunca a alguien como vos, no quiero, todo lo que deseo y busco está en vos, no porque des con un perfil, sino porque poco a poco te fuiste haciendo todo lo que busco en alguien, eres mi tipo, pero no porque tenga un "tipo" sino porque eres todo lo que quiero.</p>
+        <label for="p3" class="btn">Siguiente</label>
+    </div>
+
+    <div class="contenido c3">
+        <p>
+        	Haré todo lo posible por cumplir mis metas contigo y verte cumplir las tuyas, quiero todo, quiero que formemos un hogar, quiero que puedas confiar de nuevo en alguien, quiero confiarte todo de mi.
+        </p>
+        <p>
+        	Y sino..
+        </p>
+        <p>
+        	Quiero que sepas que siempre vas a ser el amor de mi vida, mi princesa, mi niña, mi mujer, mi estandar, mi reina. No volveré a sentir esto por nadie más, estoy seguro, todas las canciones de amor son y siempre serán tuyas.
+        </p>
+        <label for="p4" class="btn">Siguiente</label>
+    </div>
+    <div class="contenido c4">
+        <p>
+        	te amo como no te imaginas.
+        	<label for="p5" class="btn">Siguiente</label>
+        </p>
+    </div>
+    <div class="contenido c5">
+        <p>
+        	feliz san valentin, mi niña.
+        </p>
+        <div class="video-container">
+	        <iframe 
+	            src="https://youtu.be/sDMxQF18yvA?si=0AUtFM3roIeOiBoE" 
+	            title="Jósean Log - Chachachá"
+	            allowfullscreen>
+	        </iframe>
+    	</div>
+    </div>
+</div>
+	</div>
+</body>
+</html>

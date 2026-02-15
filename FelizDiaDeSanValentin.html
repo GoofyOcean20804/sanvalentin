@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Feliz san valentin</title>
+<style>
+	html, body{
+		margin:0;
+		height:100%;
+		background-color:#ffd187;
+		text-align:center;
+		font-family: 'valentin', sans-serif;
+		overflow:hidden;
+	}
+	@font-face {
+	    font-family: 'valentin';
+	    src: url('fonts/ValentineCupcake.ttf') format('woff2');
+	}
+	.content{
+		width:100%;
+		height:100%;
+	}
+
+	.content::before {
+        content: "";
+        position: absolute;
+        inset: 0; /* top:0 right:0 bottom:0 left:0 */
+        background-repeat:no-repeat;
+
+        background-image: url("img.png");
+        background-position: center center;
+        background-size: 60vw auto;
+
+        opacity: 0.6;
+        z-index: 0;
+    }
+    .content > * {
+        position: relative;
+        z-index: 1;
+    }
+	.main{
+		position:relative;
+
+		display:flex;
+		flex-direction:column;
+		margin:0;
+		padding:0;
+		height:100%;
+		width:100%;
+		justify-content:start;
+		align-items:center;
+	}
+	.main::before {
+        content: "";
+        position: absolute;
+        inset: 0; /* top:0 right:0 bottom:0 left:0 */
+
+        background-image: url("fondo.png");
+        background-repeat: repeat-x;
+        background-position: left top;
+        background-size: auto 100%;
+
+        opacity: 0.4; /* 20% */
+        z-index: 0;
+
+        animation: moverFondo 10s linear infinite;
+    }
+
+    /* Contenido por encima */
+    .main > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Animación */
+	@keyframes moverFondo {
+	    from {
+	        background-position: 0 0;
+	    }
+	    to {
+	        background-position: -1077px 0;
+	    }
+	}
+
+	h1{
+		font-size: clamp(1.5rem, 5vw, 4rem);
+
+		text-shadow:0 0 10px #ff6666;
+
+		margin:50px;
+	}
+
+	a {
+		font-family: 'valentin', sans-serif;
+	    background: linear-gradient(135deg, #ff4d6d, #ff8fab);
+	    color: white;
+	    border: none;
+	    padding: 12px 28px;
+	    border-radius: 30px;
+	    font-size: 1rem;
+	    font-weight: 600;
+	    cursor: pointer;
+	    transition: all 0.3s ease;
+	    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+
+	    z-index:2;
+	}
+
+	a:hover {
+	    transform: translateY(-3px);
+	    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
+	}
+
+	a:active {
+	    transform: scale(0.95);
+	}
+</style>
+</head>
+<body>
+	<div class="main">
+		<h1 style="color:#ffffff; text-decoration:underline;">eliz dia de san valentí</h1>
+		<h1>❤️</h1>
+		<div class="content">
+				<a href="album.html">Album</a>
+				<a href="carta.html">Carta</a>
+		</div>
+	</div>
+</body>
+</html>

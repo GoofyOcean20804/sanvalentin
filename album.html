@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FotitOs</title>
+
+<style>
+	*{
+    	box-sizing: border-box;
+	}
+	@font-face {
+	    font-family: 'valentin';
+	    src: url('fonts/ValentineCupcake.ttf') format('woff2');
+	}
+	html, body{
+		margin:0;
+		height:100%;
+		background-color:#ffd187;
+		text-align:center;
+		font-family: 'valentin', sans-serif;
+	}
+	h1, h3{
+		color:white;
+		text-shadow:3px 3px 0 black;
+	}
+	.main{
+		margin-top:50px;
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		padding:0;
+		height:100%;
+		width:100%;
+		justify-content:start;
+		align-items:center;
+	}
+	.main::before {
+        content: "";
+        position: fixed;
+        inset: 0; /* top:0 right:0 bottom:0 left:0 */
+
+        background-image: url("fondo.png");
+        background-repeat:repeat;
+        background-size: auto 100%;
+        opacity: 0.4; /* 20% */
+        z-index: 0;
+
+        animation: moverFondo 10s linear infinite;
+    }
+
+    /* Contenido por encima */
+    .main > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Animación */
+	@keyframes moverFondo {
+	    from {
+	        background-position: 0 0;
+	    }
+	    to {
+	        background-position: -1077px 0;
+	    }
+	}
+	.img{
+		background-color: white;
+		width:50vw;
+		aspect-ratio: 1/1.3;
+
+	}
+	.img-left{		
+		transform: rotate(-10deg);
+	}
+	.img-right{		
+		transform: rotate(10deg);
+	}
+	.img-container img{
+	    width:100%;
+	    height:100%;
+	    object-fit:cover;
+	    object-position:center;
+	    display:block;
+	}
+	a {
+		font-family: 'valentin', sans-serif;
+	    background: linear-gradient(135deg, #ff4d6d, #ff8fab);
+	    color: white;
+	    border: none;
+	    padding: 12px 28px;
+	    border-radius: 30px;
+	    font-size: 1rem;
+	    font-weight: 600;
+	    cursor: pointer;
+	    transition: all 0.3s ease;
+	    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+
+	    z-index:2;
+	}
+
+	a:hover {
+	    transform: translateY(-3px);
+	    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
+	}
+
+	a:active {
+	    transform: scale(0.95);
+	}
+	#back{
+		z-index:10;
+		position: fixed;
+		left:20px;
+	}
+	.img-container{
+		padding:10px;
+		width:100%;
+		aspect-ratio: 1/1;
+		overflow:hidden;
+	}
+	.img{
+	    transition: transform 4s ease;
+	}
+
+	.img:active{
+	    transform: rotate(0deg) scale(1.2);
+	    z-index:5;
+	}
+</style>
+</head>
+<body>
+	<a href="FelizDiaDeSanValentin.html" id="back">Volver</a>
+	<div class="main">	
+		<h1>Fotitos</h1>
+		<h3>Fotitos juntos o que me gustaron de vos <3...</h3>
+		<a href="images/imagenes.zip" download>Descargar todo</a>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+    <div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/1.jpeg">
+	    </div>
+	    <p>Fotito q te andaba presumiendo kjaska</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/2.jpeg">
+	    </div>
+	    <p>todo lo rojo te queda hermoso</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/3.jpeg">
+	    </div>
+	    <p>presumiendote con cualquier excusa</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/4.jpeg">
+	    </div>
+	    <p>KJASDJKSA mencanta</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/5.jpeg">
+	    </div>
+	    <p><3..</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/6.jpeg">
+	    </div>
+	    <p>esepelazomencanta</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/7.jpeg">
+	    </div>
+	    <p>nyaaa~</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/8.jpeg">
+	    </div>
+	    <p>tupelo,tuolor,,,</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/9.jpeg">
+	    </div>
+	    <p>ojazos</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/10.jpeg">
+	    </div>
+	    <p>JAKSDKJAS Y ESTO?</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/11.jpeg">
+	    </div>
+	    <p>paseando <3</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/12.jpeg">
+	    </div>
+	    <p>rateandonos KAJSDJKA</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/13.jpeg">
+	    </div>
+	    <p>nos la pasabamos de babosos en la escuela</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/14.jpeg">
+	    </div>
+	    <p>q tierna q sos</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/15.jpeg">
+	    </div>
+	    <p>q eran esos pelos mios wtf</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/16.jpeg">
+	    </div>
+	    <p>concierto random</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/17.jpeg">
+	    </div>
+	    <p>🤡</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/18.jpeg">
+	    </div>
+	    <p>outfits iguales</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/19.jpeg">
+	    </div>
+	    <p>elfeo y la preciosa</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/20.jpeg">
+	    </div>
+	    <p>contugata</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/21.jpeg">
+	    </div>
+	    <p>pensandoenhermosa</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/22.jpeg">
+	    </div>
+	    <p>matecocidoentazadeHelloKitty</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/23.jpeg">
+	    </div>
+	    <p>Somos avatars</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/24.jpeg">
+	    </div>
+	    <p><3<3<3</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/25.jpeg">
+	    </div>
+	    <p>primera "cita" jkasjka</p>
+	</div>
+
+	<div class="img img-right">
+	    <div class="img-container">
+	        <img src="images/26.jpeg">
+	    </div>
+	    <p>amor en el tercermundismo</p>
+	</div>
+
+	<div class="img img-left">
+	    <div class="img-container">
+	        <img src="images/27.jpeg">
+	    </div>
+	    <p><3</p>
+</div>
+		<h1>Espero tener muchas más.. <3</h1>
+	</div>
+</body>
+</html>
